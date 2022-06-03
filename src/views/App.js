@@ -1,27 +1,25 @@
-import logo from 'assets/logo.svg';
-import './App.css';
+import React from 'react';
+import UsersList from 'components/organisms/UsersList/UsersList';
+import styled, { ThemeProvider } from 'styled-components';
+import { GlobalStyles } from 'assets/styles/globalStyles';
+import { theme } from 'assets/styles/theme';
 
-console.log('hello');
+const Wrapper = styled.div`
+  background-color: ${({ theme }) => theme.colors.lightGrey};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+`;
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <ThemeProvider theme={theme}>
+    <GlobalStyles />
+    <Wrapper>
+      <UsersList />
+    </Wrapper>
+  </ThemeProvider>
+);
 
 export default App;
