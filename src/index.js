@@ -1,11 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import 'index.css';
 import App from 'views/App';
+import { worker } from 'mocks/browser';
+import AppProviders from 'providers/AppProviders';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+worker.start().then(() => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <AppProviders>
+        <App />
+      </AppProviders>
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
+});
