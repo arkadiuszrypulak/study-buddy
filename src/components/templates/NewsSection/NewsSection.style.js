@@ -6,10 +6,12 @@ export const Wrapper = styled.div`
   grid-column: 3 / 3;
   border-left: 1px solid ${({ theme }) => theme.colors.darkPurple};
   display: flex;
+  width: 100%;
+  height: 100vh;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 50px;
+  padding: 60px;
   overflow-y: scroll;
 `;
 
@@ -19,7 +21,7 @@ export const NewsSectionHeader = styled.h2`
 `;
 
 export const ArticleWrapper = styled(ViewWrapper)`
-  margin: 30px 0;
+  margin: 20px 0;
   width: 100%;
   max-width: unset;
   border-radius: 12px;
@@ -42,6 +44,7 @@ export const TitleWrapper = styled.div`
 
 export const ContentWrapper = styled.div`
   display: flex;
+
   img {
     margin-left: 35px;
     max-width: 200px;

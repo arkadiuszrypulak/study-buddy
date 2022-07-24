@@ -3,7 +3,7 @@ import { ViewWrapper } from 'components/molecules/ViewWrapper/ViewWrapper';
 
 export const Wrapper = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +21,6 @@ export const TitleWrapper = styled.div`
   nav a {
     margin-left: 15px;
     display: inline-block;
-    line-height: 30px;
     text-align: center;
     background-color: white;
     border-radius: 50px;

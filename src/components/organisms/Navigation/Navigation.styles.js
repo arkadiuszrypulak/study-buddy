@@ -29,6 +29,11 @@ export const Logo = styled.div`
     color: ${({ theme }) => theme.colors.white};
     text-align: right;
     margin-right: 20px;
+    transition: 0.3s;
+  }
+
+  h1:hover {
+    transform: scale(1.1);
   }
 `;
 

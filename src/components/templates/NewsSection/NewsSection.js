@@ -1,4 +1,3 @@
-import { Button } from 'components/atoms/Button/Button';
 import React, { useState, useEffect } from 'react';
 import { ArticleWrapper, ContentWrapper, NewsSectionHeader, TitleWrapper, Wrapper } from './NewsSection.style';
 import axios from 'axios';
@@ -56,7 +55,6 @@ const NewsSection = () => {
               <p>{content}</p>
               {image ? <img src={image.url} alt="article" /> : null}
             </ContentWrapper>
-            <Button isBig>Read more</Button>
           </ArticleWrapper>
         ))
       ) : (
